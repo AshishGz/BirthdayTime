@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context="com.example.birthdaytime.TaskActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeColor">
+
+        <Button
+            android:id="@+id/back_task"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/titlebarHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="7dp"
+            android:text="BIRTHDAY TIME"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_share_black_24dp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_fragment_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment1"
+        android:orientation="vertical"></FrameLayout>
+
+</RelativeLayout>
