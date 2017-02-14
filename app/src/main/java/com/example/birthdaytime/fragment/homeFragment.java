@@ -33,8 +33,6 @@ public class homeFragment extends Fragment {
         resturent = (LinearLayout) view.findViewById(R.id.ageCalculator);
         gift = (LinearLayout) view.findViewById(R.id.ageCalculator);
         homeClicable();
-        imageSlider changeImage = new imageSlider();
-        changeImage.slider();
 
 
         return view;
