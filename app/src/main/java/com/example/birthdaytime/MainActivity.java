@@ -117,6 +117,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
 
+
         if (view == itemHome) {
             changeFragment(new homeFragment());
             titlebarHeading.setText("Birthday Time");
@@ -147,6 +148,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     // What good method is to access resideMenu？
     public ResideMenu getResideMenu() {
         return resideMenu;
+    }
+
+    @Override
+    protected void onResume() {
+        changeFragment(new homeFragment());
+        super.onResume();
     }
 }
 
