@@ -21,7 +21,7 @@ public class TaskActivity extends AppCompatActivity {
         android.support.v4.app.FragmentTransaction transaction = manager.beginTransaction();
         back_task = (Button) findViewById(R.id.back_task);
         if (value.equals("age")) {
-            Log.i("value::", "::::::::: " + value);
+            Log.i("value:::", "::::::::: " + value);
             transaction.replace(R.id.main_fragment_task, new ageCalculatorFragment());
         } else {
             Log.i("value::", "?????????????? " + value);
