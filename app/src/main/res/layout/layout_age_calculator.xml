@@ -2,13 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF">
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/datepiker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/viewColor"
+        android:calendarTextColor="#000">
+
+
+    </DatePicker>
+
+    <Button
+        android:id="@+id/calAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGE" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Age Calculator"
-        android:textColor="#000" />
-
+        android:id="@+id/showAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="date"
+        android:textColor="@color/themeColor"
+        android:textSize="30sp" />
 
 </LinearLayout>
+
+
