@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +15,8 @@ import com.example.birthdaytime.getterSetter.birthdayInfo;
 
 public class add_birthday extends AppCompatActivity {
     EditText nameEditText, birthYearEditText, birthMonthEditText, birthDayEeditText, alramHourEditText, alramMinuteEditText, phoneNumberEditText, massageEditText;
-    ImageView addBirthday, back, btnAdd, update;
+    ImageView addBirthday, back, btnAdd;
+    Button update;
     TextView heading;
     DatabaseHelper databaseHelper;
     Integer id;
@@ -38,7 +40,7 @@ public class add_birthday extends AppCompatActivity {
         massageEditText = (EditText) findViewById(R.id.massageEditText);
         addBirthday = (ImageView) findViewById(R.id.btnAdd);
         btnAdd = (ImageView) findViewById(R.id.btnAdd);
-        update = (ImageView) findViewById(R.id.profile);
+        update = (Button) findViewById(R.id.update);
         heading = (TextView) findViewById(R.id.heading);
         back = (ImageView) findViewById(R.id.btnBack);
 
@@ -95,6 +97,7 @@ public class add_birthday extends AppCompatActivity {
     }
 
     public void updateDataPopulate() {
+        btnAdd.setVisibility(View.GONE);
         birthdayInfo info = databaseHelper.getBirthdayInfo(id + "");
         heading.setText("Edit Birthday");
         btnAdd.setImageResource(R.drawable.ic_add);
@@ -106,6 +109,7 @@ public class add_birthday extends AppCompatActivity {
         alramMinuteEditText.setText(info.getAlramMinute());
         phoneNumberEditText.setText(info.getPhoneNumber());
         massageEditText.setText(info.getMassage());
+        Log.i("name", "updateDataPopulate: " + info.getName() + info.getPhoneNumber());
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

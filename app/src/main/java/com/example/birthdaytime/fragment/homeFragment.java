@@ -75,10 +75,10 @@ public class homeFragment extends Fragment implements BaseSliderView.OnSliderCli
 
     public void slideImage() {
         HashMap<String, String> url_maps = new HashMap<String, String>();
-        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
-        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
-        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
-        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+        url_maps.put("Samjhana", "https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/16708678_728754423954905_239252669295343550_n.jpg?oh=c25561ca55e86b04694f5e9862c15c84&oe=593181AD");
+        url_maps.put("life", "https://fb-s-d-a.akamaihd.net/h-ak-xpt1/v/t1.0-0/p206x206/14470482_652384044925277_7478711624906405562_n.jpg?oh=cd57b14fa3195a6fdecd4fc6fa171789&oe=594B5876&__gda__=1496177514_879d77d51d8efb2adc3761f2f80a28cf");
+        url_maps.put("Ashish", "https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/1484115_768292829873413_6323326440013707268_n.jpg?oh=03ba91ed5bfda6a63f37dae7ebbd341f&oe=5946C9FA");
+        url_maps.put("Cute", "https://scontent-sit4-1.xx.fbcdn.net/v/t31.0-8/s960x960/16601616_726932780803736_7216687716651756536_o.jpg?oh=f91df369cfd32e0a22da233f498c5e61&oe=592FAD50");
 
 
         // HashMap<String, Integer> file_maps = new HashMap<String, Integer>();

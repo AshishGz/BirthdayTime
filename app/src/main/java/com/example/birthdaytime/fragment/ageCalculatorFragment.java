@@ -41,7 +41,7 @@ public class ageCalculatorFragment extends Fragment {
 
                 findAgeClass calAgeOf = new findAgeClass();
                 String getAge = calAgeOf.findAge(userYear + "", userMonth + "", userDay + "");
-                showAge.setText(getAge);
+                showAge.setText("Your Age is : " + getAge);
 
 
             }
