@@ -9,18 +9,22 @@
         android:id="@+id/datepiker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:background="@color/viewColor"
         android:calendarTextColor="#000">
 
 
     </DatePicker>
-
     <Button
         android:id="@+id/calAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AGE" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/viewColor" />
     <TextView
         android:id="@+id/showAge"
         android:layout_width="wrap_content"
@@ -29,6 +33,11 @@
         android:text="date"
         android:textColor="@color/themeColor"
         android:textSize="30sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/viewColor" />
 
 </LinearLayout>
 

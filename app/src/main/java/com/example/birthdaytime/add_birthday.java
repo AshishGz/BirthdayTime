@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.birthdaytime.getterSetter.birthdayInfo;
+
 public class add_birthday extends AppCompatActivity {
     EditText nameEditText, birthYearEditText, birthMonthEditText, birthDayEeditText, alramHourEditText, alramMinuteEditText, phoneNumberEditText, massageEditText;
     ImageView addBirthday, back, btnAdd, update;

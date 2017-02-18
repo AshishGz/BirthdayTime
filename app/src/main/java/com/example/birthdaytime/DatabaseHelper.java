@@ -1,10 +1,12 @@
 package com.example.birthdaytime;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.v4.app.FragmentActivity;
+
+import com.example.birthdaytime.getterSetter.birthdayInfo;
 
 import java.util.ArrayList;
 
@@ -28,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "\t`flag`\tINTEGER DEFAULT 0\n" +
             ")";
 
-    public DatabaseHelper(Context context) {
+    public DatabaseHelper(FragmentActivity context) {
         super(context, name, null, version);
         getWritableDatabase().execSQL(createTableSql);
     }
@@ -92,6 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         c.close();
         return info;
     }
+
 
     public void updateBirthday(ContentValues cv, String id) {
         getWritableDatabase().update("addBirthday", cv, "id=?", new String[]{id});

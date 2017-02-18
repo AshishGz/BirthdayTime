@@ -1,4 +1,4 @@
-package com.example.birthdaytime;
+package com.example.birthdaytime.getterSetter;
 
 /**
  * Created by admin on 2/6/2017.

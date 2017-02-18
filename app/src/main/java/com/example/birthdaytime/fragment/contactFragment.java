@@ -19,7 +19,7 @@ import android.widget.ToggleButton;
 import com.example.birthdaytime.DatabaseHelper;
 import com.example.birthdaytime.R;
 import com.example.birthdaytime.add_birthday;
-import com.example.birthdaytime.contactInfo;
+import com.example.birthdaytime.getterSetter.contactInfo;
 
 import java.util.ArrayList;
 

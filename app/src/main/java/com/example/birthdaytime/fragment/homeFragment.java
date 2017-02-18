@@ -30,6 +30,7 @@ public class homeFragment extends Fragment implements BaseSliderView.OnSliderCli
     private SliderLayout mDemoSlider;
 
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,24 +74,25 @@ public class homeFragment extends Fragment implements BaseSliderView.OnSliderCli
     }
 
     public void slideImage() {
-        //HashMap<String,String> url_maps = new HashMap<String, String>();
-        //url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
-        //url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
-        //url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
-        //url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+        HashMap<String, String> url_maps = new HashMap<String, String>();
+        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
+        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
+        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
+        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
 
-        HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("Birth Time Gallery", R.drawable.ic_launcher);
-        file_maps.put("Birth  ", R.drawable.ic_birthday);
-        file_maps.put("Time", R.drawable.ic_contact_home);
-        file_maps.put("Gallery", R.drawable.profle);
 
-        for (String name : file_maps.keySet()) {
+        // HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
+        //file_maps.put("Birth Time Gallery", R.drawable.ic_launcher);
+        //file_maps.put("Birth  ", R.drawable.ic_birthday);
+        //file_maps.put("Time", R.drawable.ic_contact_home);
+        //file_maps.put("Gallery", R.drawable.profle);
+
+        for (String name : url_maps.keySet()) {
             TextSliderView textSliderView = new TextSliderView(getActivity());
             // initialize a SliderLayout
             textSliderView
                     .description(name)
-                    .image(file_maps.get(name))
+                    .image(url_maps.get(name))
                     .setScaleType(BaseSliderView.ScaleType.Fit)
                     .setOnSliderClickListener(this);
 

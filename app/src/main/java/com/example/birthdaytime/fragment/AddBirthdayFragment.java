@@ -14,10 +14,11 @@ import android.widget.TextView;
 import com.example.birthdaytime.DatabaseHelper;
 import com.example.birthdaytime.R;
 import com.example.birthdaytime.add_birthday;
-import com.example.birthdaytime.birthdayInfo;
+import com.example.birthdaytime.getterSetter.birthdayInfo;
+import com.example.birthdaytime.javaClass.RemainingDays;
+import com.example.birthdaytime.javaClass.findAgeClass;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
@@ -31,6 +32,8 @@ public class AddBirthdayFragment extends Fragment {
     LinearLayout displayBirtday;
     DatabaseHelper databaseHelper;
     ImageView addFromComtact;
+    findAgeClass findAge = new findAgeClass();
+    RemainingDays remainingDays = new RemainingDays();
 
     @Nullable
     @Override
@@ -60,7 +63,7 @@ public class AddBirthdayFragment extends Fragment {
             // Log.i("size:", "size inside:" + info.getName());
             name.setText(info.getName());
             dob.setText(info.getBirthDay() + "/ " + info.getBirthMonth() + "/ " + info.getBirthYear() + " ,"
-                    + findAge(info.getBirthYear(), info.getBirthMonth(), info.getBirthDay()));
+                    + findAge.findAge(info.getBirthYear(), info.getBirthMonth(), info.getBirthDay()));
             ImageView edit = (ImageView) view.findViewById(R.id.edit);
             edit.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -80,6 +83,8 @@ public class AddBirthdayFragment extends Fragment {
             addFromComtact = (ImageView) view.findViewById(R.id.addFromContact);
             addFromComtact.setVisibility(View.GONE);
             displayBirtday.addView(view);
+            remainingDays.calculateRemaingDays(info.getBirthYear(), info.getBirthMonth(), info.getBirthDay());
+
         }
 
     }
@@ -127,23 +132,6 @@ public class AddBirthdayFragment extends Fragment {
                     }
                 })
                 .show();
-    }
-
-    public String findAge(String giveYear, String givenMonth, String givenDay) {
-        Calendar calDOB = Calendar.getInstance();
-        calDOB.set(Integer.parseInt(giveYear), Integer.parseInt(givenMonth), Integer.parseInt(givenDay));
-//setup calNow as today.
-        Calendar calNow = Calendar.getInstance();
-        calNow.setTime(new java.util.Date());
-//calculate age in years.
-        int ageYr = (calNow.get(Calendar.YEAR) - calDOB.get(Calendar.YEAR));
-// calculate additional age in months, possibly adjust years.
-        int ageMo = (calNow.get(Calendar.MONTH) - calDOB.get(Calendar.MONTH));
-        if (ageMo < 0) {
-//adjust years by subtracting one
-            ageYr--;
-        }
-        return ageYr + "";
     }
 
 
